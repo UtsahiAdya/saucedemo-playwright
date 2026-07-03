@@ -22,6 +22,7 @@ class BasePage {
 
   async closeMenu() {
     await this.closeMenuBtn.click();
+    await this.menuWrapper.waitFor({ state: 'hidden' });
   }
 
   async isMenuOpen() {
